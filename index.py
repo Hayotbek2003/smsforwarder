@@ -136,7 +136,7 @@ def send_telegram_message(msg="testing..."):
 old_sms = ""
 while True:
     sms = get_sms()
-    if sms != old_sms:
-        send_telegram_message(sms)
-        old_sms = sms
+    # if sms != old_sms:
+    #     send_telegram_message(sms)
+    #     old_sms = sms
     time.sleep(5)
