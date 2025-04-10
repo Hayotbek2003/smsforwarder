@@ -84,7 +84,7 @@ def extract_code(text):
 # SMS olish
 def get_sms():
     try:
-        result = subprocess.check_output(['termux-sms-list', '-l', '1'])
+        result = subprocess.check_output(['termux-sms-list', '-l', '1'], stderr=subprocess.PIPE, timeout=10)
         
         sms_data = json.loads(result.decode('utf-8'))
         
